@@ -5,8 +5,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import icon from './assets/img/go-icon.svg'
 import logo from './assets/img/go-logo.svg'
 const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '/Blogs' },
+    { name: 'Home', to: '/' },
+    { name: 'Features', to: '/Blogs' },
     { name: 'Works', href: '#' },
     { name: 'Contact', href: '#' },
   ]
@@ -42,7 +42,7 @@ const Layout = () =>{
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <Link key={item.name} to={item.to} className="text-sm font-semibold leading-6 text-gray-900">
                 {item.name}
               </Link>
             ))}
@@ -80,7 +80,7 @@ const Layout = () =>{
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.to}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
