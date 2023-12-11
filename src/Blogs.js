@@ -43,7 +43,7 @@ const [color,setColor] = useState('red');
 
               {/* Hooks */}
 
-         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">My Favorite color is {color}</h1>
+         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">My Favorite color is <span style={{color: "{color}"}}>{color}</span></h1>
 
 <button type="button" className="text-base font-semibold leading-7 text-indigo-600" onClick={() =>setColor('blue')}>Blue</button>
 <button type="button" className="text-base font-semibold leading-7 text-indigo-600" onClick={() =>setColor('green')}>Green</button>
